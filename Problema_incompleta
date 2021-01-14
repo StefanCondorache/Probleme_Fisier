@@ -1,15 +1,23 @@
-with open("input.txt","r") as i:          #incomplet
+with open("input.txt","r") as i:        
     string=i.readline()
+l_mari=''
+l_mici=''
+cifre=''
+opm=''
 for x in string:
     if ord(x)>=65 and ord(x)<=90:
-        with open("litereA.txt","w") as lA:
-            lA.write(x)
+        l_mari+=x
     if ord(x)>=97 and ord(x)<=122:
-        with open("litereB.txt","w") as lB:
-            lB.write(x)
+        l_mici+=x
     if ord(x)>=48 and ord(x)<=57:
-        with open("cifre.txt","w") as c:
-            c.write(x)
+        cifre+=x
     if ord(x)==45 or ord(x)==43 or ord(x)==47 or ord(x)==42:
-        with open("operatri.txt","w") as o:
-            o.write(x)
+        opm+=x
+with open("litereA.txt","w") as lA:
+            lA.write(l_mari)
+with open("litereB.txt","w") as lB:
+            lB.write(l_mici)
+with open("cifre.txt","w") as c:
+            c.write(cifre)
+with open("operatri.txt","w") as o:
+            o.write(opm)
