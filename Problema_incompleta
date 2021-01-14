@@ -1,0 +1,15 @@
+with open("input.txt","r") as i:          #incomplet
+    string=i.readline()
+for x in string:
+    if ord(x)>=65 and ord(x)<=90:
+        with open("litereA.txt","w") as lA:
+            lA.write(x)
+    if ord(x)>=97 and ord(x)<=122:
+        with open("litereB.txt","w") as lB:
+            lB.write(x)
+    if ord(x)>=48 and ord(x)<=57:
+        with open("cifre.txt","w") as c:
+            c.write(x)
+    if ord(x)==45 or ord(x)==43 or ord(x)==47 or ord(x)==42:
+        with open("operatri.txt","w") as o:
+            o.write(x)
