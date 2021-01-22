@@ -1,0 +1,13 @@
+with open('input.txt','r') as i:     #Nume Prenume 
+    string=i.readline()
+string,var,list1=list(str(string))+[','],'',[]
+for x in string:
+    if x!=',':
+        var+=x
+    else:
+        list1.append(var)
+        var=''
+list2=sorted(list1)
+with open('output.txt','w')as o:
+    for x in list2:
+        o.write(str(x)+'\n')
